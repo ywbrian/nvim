@@ -1,3 +1,7 @@
+// Better indenting
+vim.keymap.set("x", "<", "<gv", { noremap = true, silent = true })
+vim.keymap.set("x", ">", ">gv", { noremap = true, silent = true })
+
 -- File tree
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
