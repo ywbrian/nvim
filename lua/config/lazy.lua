@@ -14,6 +14,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {

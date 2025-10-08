@@ -24,7 +24,20 @@ return {
     {
         "nvim-tree/nvim-tree.lua",
         config = function()
-            require("nvim-tree").setup()
+            require("nvim-tree").setup({
+                view = {
+                    width = 30,
+                    side = "left",
+                },
+                filters = {
+                    dotfiles = false,
+                    custom = {},
+                },
+                git = {
+                    enable = true,
+                    ignore = false,
+                },
+            })
         end,
     },
 }

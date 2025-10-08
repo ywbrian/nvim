@@ -29,17 +29,17 @@ end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- Configure C & C++ server
-vim.lsp.start({
-    name = "clangd",
+vim.lsp.config.clangd = {
     cmd = { "clangd" },
+    filetypes = { "c", "cpp" },
     capabilities = capabilities,
     on_attach = on_attach,
-})
+}
 
 -- Configure Lua server
-vim.lsp.start({
-    name = "lua_ls", 
+vim.lsp.config.lua_ls = {
     cmd = { "lua-language-server" },
+    filetypes = { "lua" },
     capabilities = capabilities,
     on_attach = on_attach,
     settings = {
@@ -49,4 +49,12 @@ vim.lsp.start({
             }
         }
     }
-})
+}
+
+-- Configure Python server
+vim.lsp.config.pylsp = {
+    cmd = { "pylsp" },
+    filetypes = { "python" },
+    capabilities = capabilities,
+    on_attach = on_attach,
+}
