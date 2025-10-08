@@ -1,4 +1,4 @@
-// Better indenting
+-- Better indenting
 vim.keymap.set("x", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("x", ">", ">gv", { noremap = true, silent = true })
 
