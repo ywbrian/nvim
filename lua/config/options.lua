@@ -1,39 +1,35 @@
-local opt = vim.opt
+vim.g.mapleader         = " "
 
--- line numbers
-opt.relativenumber = true
-opt.number = true
+vim.opt.number          = true
+vim.opt.relativenumber  = true
+vim.opt.cursorline      = true
 
--- tabs & indentation
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.autoindent = true
+vim.opt.expandtab       = true
+vim.opt.shiftwidth      = 4
+vim.opt.tabstop         = 4
+vim.opt.smartindent     = true
 
--- line wrapping
-opt.wrap = false
+vim.opt.wrap            = false
+vim.opt.scrolloff       = 5
+vim.opt.sidescrolloff   = 8
 
--- search settings
-opt.ignorecase = true
-opt.smartcase = true
+vim.opt.ignorecase      = true
+vim.opt.smartcase       = true
+vim.opt.incsearch       = true
+vim.opt.hlsearch        = true
 
--- cursor line
-opt.cursorline = true
+vim.opt.termguicolors   = true
+vim.opt.background      = "dark"
+vim.opt.signcolumn      = "yes"
+vim.opt.colorcolumn     = "100"
 
--- appearance
-opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
-opt.colorcolumn = "80"
+vim.opt.splitbelow      = true
+vim.opt.splitright      = true
 
--- backspace
-opt.backspace = "indent,eol,start"
+vim.opt.swapfile        = false
+vim.opt.backup          = false
+vim.opt.undofile        = true
 
--- clipboard
-opt.clipboard:append("unnamedplus")
-
--- split windows
-opt.splitright = true
-opt.splitbelow = true
-
-opt.iskeyword:append("-")
+vim.opt.confirm         = true
+vim.opt.hidden          = true
+vim.opt.completeopt     = { "menu", "menuone", "noselect" }
