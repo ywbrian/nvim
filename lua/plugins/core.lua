@@ -11,7 +11,7 @@ return {
                     "lua", "vim", "vimdoc", "query" },
                 auto_install = true,
                 highlight = { enable = true },
-                indent = { enable = true },
+                indent = { enable = false },
         })
     end
   },
