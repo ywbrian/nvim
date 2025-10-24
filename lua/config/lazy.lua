@@ -14,14 +14,26 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
--- Setup lazy.nvim
 require("lazy").setup({
-    spec = {
-        { import = "plugins" },
+  spec = {
+    { 
+        import = "plugins" 
     },
-    install = { colorscheme = { "habamax" } },
-    checker = { enabled = true },
+  },
+
+  install = { 
+      colorscheme = { "habamax" },
+  },
+
+  checker = { 
+      enabled = true,
+      notify = false,
+  },
+
+  change_detection = {
+      notify = false,
+  },
 })
