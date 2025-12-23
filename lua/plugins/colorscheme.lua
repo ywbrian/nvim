@@ -1,12 +1,10 @@
 return {
-  "catppuccin/nvim",
-  name = "catppuccin",
-  priority = 1000, -- Load before other plugins
+  "rebelot/kanagawa.nvim",
+  name = "kanagawa",
+  priority = 1000,
   config = function()
-    require("catppuccin").setup({
-        auto_integrations = true,
-    })
+    require("kanagawa").setup()
 
-    vim.cmd.colorscheme("catppuccin")
+    vim.cmd.colorscheme("kanagawa")
   end,
 }
