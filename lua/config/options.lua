@@ -8,13 +8,9 @@ vim.opt.cursorlineopt   = "number"
 vim.opt.expandtab       = true
 vim.opt.shiftwidth      = 4
 vim.opt.tabstop         = 4
-vim.opt.autoindent      = true
-vim.opt.smartindent     = true
-vim.opt.cindent         = true
 
 vim.opt.ignorecase      = true
 vim.opt.smartcase       = true
-vim.opt.hlsearch        = true
 
 vim.opt.termguicolors   = true
 vim.opt.background      = "dark"
@@ -31,6 +27,7 @@ vim.opt.updatetime      = 250
 vim.opt.timeoutlen      = 300
 vim.opt.confirm         = true
 vim.opt.mouse           = "a"
+vim.opt.clipboard       = "unnamedplus"
 
 vim.opt.swapfile        = false
 vim.opt.undofile        = true
