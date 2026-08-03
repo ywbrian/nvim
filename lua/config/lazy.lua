@@ -1,3 +1,4 @@
+-- Bootstrap lazy.nvim (https://lazy.folke.io/installation)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -14,26 +15,39 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " "
+-- mapleader is set in config.options, which is required first.
 vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
   spec = {
-    { 
-        import = "plugins" 
-    },
+    { import = "plugins" },
   },
 
-  install = { 
-      colorscheme = { "habamax" },
+  install = {
+    colorscheme = { "kanagawa-wave" },
   },
 
-  checker = { 
-      enabled = true,
-      notify = false,
+  checker = {
+    enabled = true,
+    notify = false,
   },
 
   change_detection = {
-      notify = false,
+    notify = false,
+  },
+
+  -- Nothing here needs luarocks; skip the hererocks bootstrap and its warnings.
+  rocks = { enabled = false },
+
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "gzip",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
   },
 })
